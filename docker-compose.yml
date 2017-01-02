@@ -2,6 +2,8 @@ redis:
     build: ./redis
     expose:
         - 6379
+    volumes:
+        - /var/lib/redis:/var/lib/redis
     tty: true
     stdin_open: true
 
