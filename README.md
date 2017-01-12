@@ -1,9 +1,10 @@
-# Docker Compose demo
+# Docker Compose mockbin
 
-## 介绍
-项目分两层结构，代理层和服务层。
+客户端需要绑定主机名
 
-* proxy
-  * openresty
-* web
-  * openresty
+```
+172.28.32.102 apiembed.local
+172.28.32.102 mockbin.local
+```
+
+172.28.32.102: docker宿主机
