@@ -8,6 +8,7 @@ RUN ["yum", "install", "-y", "npm"]
 RUN ["git", "clone", "https://github.com/Mashape/apiembed.git", "/apps/apiembed/"]
 RUN ["npm", "install", "/apps/apiembed/"]
 RUN chmod +x /ENTRYPOINT.sh
-EXPOSE 8080
+COPY package.json /apps/apiembed/
+EXPOSE 80
 ENTRYPOINT /ENTRYPOINT.sh
 

@@ -8,6 +8,8 @@ RUN ["yum", "install", "-y", "npm"]
 RUN ["git", "clone", "https://github.com/Mashape/mockbin.git", "/apps/mockbin/"]
 RUN ["npm", "install", "/apps/mockbin/"]
 RUN chmod +x /ENTRYPOINT.sh
-EXPOSE 8080
+COPY package.json /apps/mockbin/
+COPY view.jade /apps/mockbin/src/views/bin/view.jade
+EXPOSE 80
 ENTRYPOINT /ENTRYPOINT.sh
 

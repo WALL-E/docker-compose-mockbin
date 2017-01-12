@@ -1,0 +1,30 @@
+redis:
+    build: ./redis
+    expose:
+        - 6379
+    tty: true
+    stdin_open: true
+
+apiembed:
+    build: ./apiembed
+    expose:
+        - 80
+    ports:
+        - "8001:80"
+    tty: true
+    stdin_open: true
+
+mockbin:
+    build: ./mockbin
+    links:
+        - apiembed
+        - redis
+    tty: true
+    stdin_open: true
+
+    ports:
+        - "80:80"
+    expose:
+        - "80"
+    tty: true
+    stdin_open: true
