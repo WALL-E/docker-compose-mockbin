@@ -4,9 +4,12 @@
 客户端需要绑定主机名
 
 ```
-172.28.32.102 apiembed.local
-172.28.32.102 mockbin.local
+172.28.32.102 mock.qianbao.com
 ```
+
+# 端口
+* 80 mockbin
+* 8001 apiembed
 
 172.28.32.102: docker宿主机
 
