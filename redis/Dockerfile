@@ -5,7 +5,7 @@ RUN ["yum", "update", "-y"]
 RUN ["yum", "install", "-y", "epel-release"]
 RUN ["yum", "install", "-y", "redis"]
 RUN chmod +x /ENTRYPOINT.sh
-RUN cat /etc/redis.conf | grep -v "bind" > /etc/redis_default.conf
+COPY redis.conf /etc/redis_default.conf
 EXPOSE 6379
 ENTRYPOINT /ENTRYPOINT.sh
 

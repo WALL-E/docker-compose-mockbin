@@ -30,3 +30,5 @@ mockbin:
         - "80"
     tty: true
     stdin_open: true
+    dns:
+        - 172.28.32.31
