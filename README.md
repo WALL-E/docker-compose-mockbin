@@ -1,7 +1,7 @@
 # Docker Compose mockbin
 
 # 访问方式
-客户端需要绑定主机名
+dns服务器：**172.28.32.31**，增加下面一条记录
 
 ```
 172.28.32.102 mock.qianbao.com
